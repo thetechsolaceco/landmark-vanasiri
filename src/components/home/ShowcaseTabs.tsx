@@ -50,9 +50,8 @@ export default function ShowcaseTabs() {
             <div className="tab-image-wrap">
               <img
                 sizes="(max-width: 2000px) 100vw, 2000px"
-                srcSet="//images/6942854f7a89e126b7f52034_2151264489-p-500.webp 500w, /images/6942854f7a89e126b7f52034_2151264489-p-800.webp 800w, /images/6942854f7a89e126b7f52034_2151264489-p-1080.webp 1080w, /images/6942854f7a89e126b7f52034_2151264489-p-1600.webp 1600w, /images/6942854f7a89e126b7f52034_2151264489.webp 2000w"
-                alt="Photo"
-                src="/images/6942854f7a89e126b7f52034_2151264489.webp"
+                alt="Landmark Vanasiri trust and process"
+                src="/images%20new/six.jpeg"
                 loading="lazy"
                 className="tab-image"
               />
@@ -111,9 +110,8 @@ export default function ShowcaseTabs() {
             <div className="tab-image-wrap">
               <img
                 sizes="100vw"
-                srcSet="//images/69428dc7751d9fe058a60375_2151263531-p-500.webp 500w, /images/69428dc7751d9fe058a60375_2151263531-p-800.webp 800w, /images/69428dc7751d9fe058a60375_2151263531-p-1080.webp 1080w, /images/69428dc7751d9fe058a60375_2151263531-p-1600.webp 1600w, /images/69428dc7751d9fe058a60375_2151263531.webp 2000w"
-                alt="Photo"
-                src="/images/69428dc7751d9fe058a60375_2151263531.webp"
+                alt="Farmland living at Landmark Vanasiri"
+                src="/images%20new/slide6.jpg"
                 loading="lazy"
                 className="tab-image"
               />
@@ -168,9 +166,8 @@ export default function ShowcaseTabs() {
             <div className="tab-image-wrap">
               <img
                 sizes="100vw"
-                srcSet="//images/69428f7ca8ac9164f9020157_ec80a67f8f27224b5f81fd1d211a95d5_103043-p-500.webp 500w, /images/69428f7ca8ac9164f9020157_ec80a67f8f27224b5f81fd1d211a95d5_103043-p-800.webp 800w, /images/69428f7ca8ac9164f9020157_ec80a67f8f27224b5f81fd1d211a95d5_103043-p-1080.webp 1080w, /images/69428f7ca8ac9164f9020157_ec80a67f8f27224b5f81fd1d211a95d5_103043-p-1600.webp 1600w, /images/69428f7ca8ac9164f9020157_ec80a67f8f27224b5f81fd1d211a95d5_103043.webp 1920w"
-                alt="Photo"
-                src="/images/69428f7ca8ac9164f9020157_ec80a67f8f27224b5f81fd1d211a95d5_103043.webp"
+                alt="Landmark Vanasiri nature integrated layout"
+                src="/images%20new/slide1.jpg"
                 loading="lazy"
                 className="tab-image plan"
               />
@@ -266,7 +263,7 @@ export default function ShowcaseTabs() {
           >
             <a
               data-w-id="d8b176ee-32c4-ac10-5c41-2635c78207bf"
-              href="/projects"
+              href="#contact"
               className="primary-button w-inline-block"
             >
               <div className="button-spot-big">

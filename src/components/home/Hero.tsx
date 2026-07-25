@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="banner-section">
+    <section id="home" className="banner-section" style={{ scrollMarginTop: "100px" }}>
       <div className="w-layout-blockcontainer base-container w-container">
         <div className="home-1-banner">
           <div className="home-1-banner-text-wrap">
@@ -38,7 +38,7 @@ export default function Hero() {
             >
               <a
                 data-w-id="d8b176ee-32c4-ac10-5c41-2635c78207bf"
-                href="/projects"
+                href="#contact"
                 className="primary-button w-inline-block"
               >
                 <div className="button-spot-big">
@@ -137,9 +137,8 @@ export default function Hero() {
             <div className="banner-image-wrap">
               <img
                 sizes="(max-width: 2000px) 100vw, 2000px"
-                srcSet="//images/69426f492a0206fad3836d1b_2151264421-p-500.webp 500w, /images/69426f492a0206fad3836d1b_2151264421-p-800.webp 800w, /images/69426f492a0206fad3836d1b_2151264421-p-1080.webp 1080w, /images/69426f492a0206fad3836d1b_2151264421-p-1600.webp 1600w, /images/69426f492a0206fad3836d1b_2151264421.webp 2000w"
-                alt="Photo"
-                src="/images/69426f492a0206fad3836d1b_2151264421.webp"
+                alt="Landmark Vanasiri entrance gate"
+                src="/images%20new/twentyfive.jpeg"
                 loading="lazy"
                 className="banner-image _1"
               />
@@ -153,9 +152,8 @@ export default function Hero() {
             <div className="banner-image-wrap">
               <img
                 sizes="(max-width: 2000px) 100vw, 2000px"
-                srcSet="//images/69440d4bba38c2f16e22ab26_2151302595%201-p-500.webp 500w, /images/69440d4bba38c2f16e22ab26_2151302595%201-p-800.webp 800w, /images/69440d4bba38c2f16e22ab26_2151302595%201-p-1080.webp 1080w, /images/69440d4bba38c2f16e22ab26_2151302595%201-p-1600.webp 1600w, /images/69440d4bba38c2f16e22ab26_2151302595%201.webp 2000w"
-                alt="Photo"
-                src="/images/69440d4bba38c2f16e22ab26_2151302595%201.webp"
+                alt="Aerial view of Landmark Vanasiri farmland community"
+                src="/images%20new/fourteen.jpeg"
                 loading="lazy"
                 className="banner-image _2"
               />
@@ -168,9 +166,8 @@ export default function Hero() {
             <div className="banner-image-wrap">
               <img
                 sizes="(max-width: 2000px) 100vw, 2000px"
-                srcSet="//images/6942784a41790c009bd70d91_2151302596-p-500.webp 500w, /images/6942784a41790c009bd70d91_2151302596-p-800.webp 800w, /images/6942784a41790c009bd70d91_2151302596-p-1080.webp 1080w, /images/6942784a41790c009bd70d91_2151302596-p-1600.webp 1600w, /images/6942784a41790c009bd70d91_2151302596.webp 2000w"
-                alt="Photo"
-                src="/images/6942784a41790c009bd70d91_2151302596.webp"
+                alt="Landmark Vanasiri architectural farmhouse exterior"
+                src="/images%20new/five.jpeg"
                 loading="lazy"
                 className="banner-image _3"
               />

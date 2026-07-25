@@ -17,12 +17,11 @@ export default function ScrollBanner() {
         className="scroll-image-wrap"
       >
         <img
-          src="/images/6942d86c449910700d706e06_2149343634.webp"
+          src="/images%20new/twentyone.jpeg"
           loading="lazy"
           data-w-id="a9c78244-f457-f02e-4795-f7ab0331c7ff"
           sizes="(max-width: 2000px) 100vw, 2000px"
-          alt="Photo"
-          srcSet="//images/6942d86c449910700d706e06_2149343634-p-500.webp 500w, /images/6942d86c449910700d706e06_2149343634-p-800.webp 800w, /images/6942d86c449910700d706e06_2149343634-p-1080.webp 1080w, /images/6942d86c449910700d706e06_2149343634-p-1600.webp 1600w, /images/6942d86c449910700d706e06_2149343634.webp 2000w"
+          alt="Tree-lined pathway at Landmark Vanasiri"
           className="scroll-image"
         />
       </div>

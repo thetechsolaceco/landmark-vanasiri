@@ -7,12 +7,11 @@ export default function Cta() {
       <div className="w-layout-blockcontainer base-container w-container">
         <div className="cta-top">
           <img
-            src="/images/6942779b2d5062cdd5e746b0_9a22debb951c1a05f60bdbd6a10d998c_2150799779.webp"
+            src="/images%20new/four.jpeg"
             loading="lazy"
             data-w-id="e7ed3b35-efca-3baa-5c85-c3e3eee0546b"
             sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
-            alt="Photo"
-            srcSet="//images/6942779b2d5062cdd5e746b0_9a22debb951c1a05f60bdbd6a10d998c_2150799779-p-500.webp 500w, /images/6942779b2d5062cdd5e746b0_9a22debb951c1a05f60bdbd6a10d998c_2150799779-p-800.webp 800w, /images/6942779b2d5062cdd5e746b0_9a22debb951c1a05f60bdbd6a10d998c_2150799779-p-1080.webp 1080w, /images/6942779b2d5062cdd5e746b0_9a22debb951c1a05f60bdbd6a10d998c_2150799779-p-1600.webp 1600w, /images/6942779b2d5062cdd5e746b0_9a22debb951c1a05f60bdbd6a10d998c_2150799779.webp 2000w"
+            alt="Outdoor lounge area at Landmark Vanasiri"
             className="cta-small-image"
           />
           <div className="cta-text-wrap">
@@ -23,28 +22,26 @@ export default function Cta() {
         </div>
         <div className="cta-bottom-wrap">
           <img
-            src="/images/6943d483f59ecbb196b2bb6d_2151302604.webp"
+            src="/images%20new/thirteen.jpeg"
             loading="lazy"
             data-w-id="e7ed3b35-efca-3baa-5c85-c3e3eee05470"
             sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
-            alt="Photo"
-            srcSet="//images/6943d483f59ecbb196b2bb6d_2151302604-p-500.webp 500w, /images/6943d483f59ecbb196b2bb6d_2151302604-p-800.webp 800w, /images/6943d483f59ecbb196b2bb6d_2151302604-p-1080.webp 1080w, /images/6943d483f59ecbb196b2bb6d_2151302604.webp 1500w"
+            alt="Family enjoying a Landmark Vanasiri farmhouse"
             className="cta-image-2"
           />
           <div className="cta-image-3-wrap">
             <img
-              src="/images/6943d5d52401aa8d374bff17_39b58cdacff401f103132c5e803ce398_2151264508.webp"
+              src="/images%20new/twentyseven.jpeg"
               loading="lazy"
               data-w-id="e7ed3b35-efca-3baa-5c85-c3e3eee05472"
               sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px, 100vw"
-              alt="Photo"
-              srcSet="//images/6943d5d52401aa8d374bff17_39b58cdacff401f103132c5e803ce398_2151264508-p-500.webp 500w, /images/6943d5d52401aa8d374bff17_39b58cdacff401f103132c5e803ce398_2151264508-p-800.webp 800w, /images/6943d5d52401aa8d374bff17_39b58cdacff401f103132c5e803ce398_2151264508-p-1080.webp 1080w, /images/6943d5d52401aa8d374bff17_39b58cdacff401f103132c5e803ce398_2151264508.webp 1500w"
+              alt="Landmark Vanasiri entrance gate"
               className="cta-image-3"
             />
             <div data-w-id="e7ed3b35-efca-3baa-5c85-c3e3eee05473">
               <a
                 data-w-id="d8b176ee-32c4-ac10-5c41-2635c78207bf"
-                href="/contact-us"
+                href="#contact"
                 className="primary-button w-inline-block"
               >
                 <div className="button-spot-big">

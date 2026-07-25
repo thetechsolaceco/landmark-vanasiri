@@ -1,6 +1,6 @@
 export default function Services() {
   return (
-    <section className="section home-section">
+    <section id="services" className="section home-section" style={{ scrollMarginTop: "100px" }}>
       <div className="w-layout-blockcontainer base-container w-container">
         <div className="services-block">
           <div
@@ -23,8 +23,8 @@ export default function Services() {
           <div className="services-wrapper">
             <img
               className="services-image"
-              src="/images/6942dd9c7d71ad6356676c31_e6720448382abefc6e9d15061ddf49ba_2151169628.webp"
-              alt="Photo"
+              src="/images%20new/twentythree.jpeg"
+              alt="Life at Landmark Vanasiri farmhouse community"
               style={{
                 opacity: "0",
                 WebkitTransform:
@@ -39,7 +39,6 @@ export default function Services() {
               sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
               data-w-id="98cb29fe-8eb7-0808-bc1b-bf136176d397"
               loading="lazy"
-              srcSet="//images/6942dd9c7d71ad6356676c31_e6720448382abefc6e9d15061ddf49ba_2151169628-p-500.webp 500w, /images/6942dd9c7d71ad6356676c31_e6720448382abefc6e9d15061ddf49ba_2151169628-p-800.webp 800w, /images/6942dd9c7d71ad6356676c31_e6720448382abefc6e9d15061ddf49ba_2151169628-p-1080.webp 1080w, /images/6942dd9c7d71ad6356676c31_e6720448382abefc6e9d15061ddf49ba_2151169628.webp 1500w"
             />
             <div className="services">
               <div className="services-collection-list-wrapper w-dyn-list">
@@ -77,7 +76,7 @@ export default function Services() {
                   >
                     <a
                       data-w-id="85fc7860-5b71-0f3a-dc3a-8e5ad1895e85"
-                      href="/contact-us"
+                      href="#contact"
                       className="service-link-block w-inline-block"
                     >
                       <div className="service-card-text-wrap">
@@ -113,7 +112,7 @@ export default function Services() {
                   >
                     <a
                       data-w-id="85fc7860-5b71-0f3a-dc3a-8e5ad1895e85"
-                      href="/contact-us"
+                      href="#contact"
                       className="service-link-block w-inline-block"
                     >
                       <div className="service-card-text-wrap">
@@ -149,7 +148,7 @@ export default function Services() {
                   >
                     <a
                       data-w-id="85fc7860-5b71-0f3a-dc3a-8e5ad1895e85"
-                      href="/contact-us"
+                      href="#contact"
                       className="service-link-block w-inline-block"
                     >
                       <div className="service-card-text-wrap">
@@ -185,7 +184,7 @@ export default function Services() {
                   >
                     <a
                       data-w-id="85fc7860-5b71-0f3a-dc3a-8e5ad1895e85"
-                      href="/contact-us"
+                      href="#contact"
                       className="service-link-block w-inline-block"
                     >
                       <div className="service-card-text-wrap">
@@ -223,7 +222,7 @@ export default function Services() {
                   >
                     <a
                       data-w-id="85fc7860-5b71-0f3a-dc3a-8e5ad1895e85"
-                      href="/contact-us"
+                      href="#contact"
                       className="service-link-block w-inline-block"
                     >
                       <div className="service-card-text-wrap">
@@ -261,7 +260,7 @@ export default function Services() {
               >
                 <a
                   data-w-id="d8b176ee-32c4-ac10-5c41-2635c78207bf"
-                  href="/contact-us"
+                  href="#contact"
                   className="primary-button w-inline-block"
                 >
                   <div className="button-spot-big">

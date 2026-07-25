@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="section home-section">
+    <section id="about" className="section home-section" style={{ scrollMarginTop: "100px" }}>
       <div className="w-layout-blockcontainer base-container w-container">
         <div className="about-block">
           <div className="about-block-top">
@@ -43,8 +43,8 @@ export default function About() {
             <div className="about-block-image-wrap">
               <img
                 className="about-block-image"
-                src="/images/6942826103443d922712e9ae_2149571922.webp"
-                alt="Photo"
+                src="/images%20new/nine.jpeg"
+                alt="Landmark Vanasiri farmhouse exteriors with pool"
                 style={{
                   opacity: "0",
                   WebkitTransform:
@@ -59,7 +59,6 @@ export default function About() {
                 sizes="(max-width: 767px) 100vw, (max-width: 991px) 728px, 940px"
                 data-w-id="1a8cbe77-0587-13ae-a42f-e74a866e04c1"
                 loading="lazy"
-                srcSet="//images/6942826103443d922712e9ae_2149571922-p-500.webp 500w, /images/6942826103443d922712e9ae_2149571922-p-800.webp 800w, /images/6942826103443d922712e9ae_2149571922-p-1080.webp 1080w, /images/6942826103443d922712e9ae_2149571922-p-1600.webp 1600w, /images/6942826103443d922712e9ae_2149571922.webp 2000w"
               />
             </div>
           </div>

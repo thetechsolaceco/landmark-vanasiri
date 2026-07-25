@@ -2,7 +2,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export default function Footer() {
   return (
-    <div className="form-footer">
+    <div id="contact" className="form-footer" style={{ scrollMarginTop: "100px" }}>
       <div className="base-container">
         <div className="footer-top-wrap">
           <div className="footer-title-wrap">
@@ -24,14 +24,7 @@ export default function Footer() {
               </a>
             </div>
             <div data-w-id="d7b7b9ea-dacd-d701-16de-492485155cbb">
-              <a href={siteConfig.phoneHref} className="footer-contact-link">
-                {siteConfig.phone}
-              </a>
-            </div>
-            <div data-w-id="d7b7b9ea-dacd-d701-16de-492485155cbe">
-              <a href="#" className="footer-contact-link">
-                {siteConfig.email}
-              </a>
+              <span className="footer-contact-link">{siteConfig.phone}</span>
             </div>
           </div>
         </div>
@@ -39,23 +32,26 @@ export default function Footer() {
           <div className="footer-links-wrap">
             <div className="links-column">
               <a
-                href="/"
+                href="#home"
                 aria-current="page"
                 className="footer-link w--current"
               >
                 Home
               </a>
-              <a href="/about-us" className="footer-link">
+              <a href="#about" className="footer-link">
                 about vanasiri
               </a>
-              <a href="/projects" className="footer-link">
+              <a href="#projects" className="footer-link">
                 projects
               </a>
-              <a href="/services" className="footer-link">
+              <a href="#services" className="footer-link">
                 Services
               </a>
-              <a href="/faq" className="footer-link">
-                FAQ
+              <a href="#testimonials" className="footer-link">
+                testimonials
+              </a>
+              <a href="#contact" className="footer-link">
+                Contact Us
               </a>
             </div>
             <div className="links-column">
@@ -166,42 +162,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom-wrap">
           <div className="footer-rights-text">
-            © Landmark Vanasiri. All Rights Reserved.{" "}
-            <a
-              href="https://pody-wcopilot.webflow.io/templates/licensing"
-              className="footer-rights-bottom-link"
-            >
-              Licensing
-            </a>
-          </div>
-          <div className="footer-rights-wrap">
-            <div className="footer-rights-text">
-              <a
-                href="https://wcopilot.com/templates"
-                target="_blank"
-                className="footer-rights-bottom-link"
-              >
-                Template
-              </a>{" "}
-              by{" "}
-              <a
-                href="https://wcopilot.com/"
-                target="_blank"
-                className="footer-rights-bottom-link brand-rights"
-              >
-                wCopilot
-              </a>
-            </div>
-            <div className="footer-rights-text">
-              Powered by{" "}
-              <a
-                href="https://nextjs.org/"
-                target="_blank"
-                className="footer-rights-bottom-link"
-              >
-                Next.js
-              </a>
-            </div>
+            © Landmark Vanasiri. All Rights Reserved.
           </div>
         </div>
       </div>

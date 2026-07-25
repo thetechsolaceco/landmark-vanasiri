@@ -1,6 +1,6 @@
 export default function RecentProjects() {
   return (
-    <section className="section small-bottom-section">
+    <section id="projects" className="section small-bottom-section" style={{ scrollMarginTop: "100px" }}>
       <div className="w-layout-blockcontainer base-container w-container">
         <div className="title-wrap center">
           <div
@@ -74,7 +74,7 @@ export default function RecentProjects() {
                           }}
                           className="project-title-wrap"
                         >
-                          <a href="/contact-us" className="project-link">
+                          <a href="#contact" className="project-link">
                             Sustainable Farmland Living
                           </a>
                           <div className="project-card-details-wrap">
@@ -121,18 +121,16 @@ export default function RecentProjects() {
                       >
                         <img
                           loading="lazy"
-                          src="/images/6942c8509fee680469d1efb3_Modern%20Tiny%20House%20Sunset.png"
-                          alt=""
+                          src="/images%20new/eleven.jpeg"
+                          alt="Sustainable farmland living at Landmark Vanasiri"
                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 940px"
-                          srcSet="//images/6942c8509fee680469d1efb3_Modern%20Tiny%20House%20Sunset-p-500.png 500w, /images/6942c8509fee680469d1efb3_Modern%20Tiny%20House%20Sunset-p-800.png 800w, /images/6942c8509fee680469d1efb3_Modern%20Tiny%20House%20Sunset.png 967w"
                           className="project-vertical-image"
                         />
                         <img
                           loading="lazy"
-                          src="/images/6942c847c98173ac79ea8100_2151264377.jpg"
-                          alt=""
+                          src="/images%20new/twentyfour.jpeg"
+                          alt="Sustainable farmland living at Landmark Vanasiri"
                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 940px"
-                          srcSet="//images/6942c847c98173ac79ea8100_2151264377-p-500.jpg 500w, /images/6942c847c98173ac79ea8100_2151264377-p-800.jpg 800w, /images/6942c847c98173ac79ea8100_2151264377-p-1080.jpg 1080w, /images/6942c847c98173ac79ea8100_2151264377-p-1600.jpg 1600w, /images/6942c847c98173ac79ea8100_2151264377.jpg 2000w"
                           className="project-horizontal-image"
                         />
                       </div>
@@ -153,7 +151,7 @@ export default function RecentProjects() {
                       >
                         <a
                           data-w-id="6cc3df2f-41c6-d574-494a-7a27f09ca261"
-                          href="/contact-us"
+                          href="#contact"
                           className="link-button primary-color w-inline-block"
                         >
                           <div className="button-spot-big secondary-primary-color">
@@ -176,7 +174,7 @@ export default function RecentProjects() {
                     <div className="project-card">
                       <div className="project-card-left-wrap">
                         <div className="project-title-wrap">
-                          <a href="/contact-us" className="project-link">
+                          <a href="#contact" className="project-link">
                             Long Term Farmland Investment
                           </a>
                           <div className="project-card-details-wrap">
@@ -195,25 +193,23 @@ export default function RecentProjects() {
                       <div className="project-images-wrap">
                         <img
                           loading="lazy"
-                          src="/images/6942c88ff4d3d23c44bb42ba_2151264425.jpg"
-                          alt=""
+                          src="/images%20new/twelve.jpeg"
+                          alt="Long term farmland investment at Landmark Vanasiri"
                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 940px"
-                          srcSet="//images/6942c88ff4d3d23c44bb42ba_2151264425-p-500.jpg 500w, /images/6942c88ff4d3d23c44bb42ba_2151264425-p-800.jpg 800w, /images/6942c88ff4d3d23c44bb42ba_2151264425.jpg 1043w"
                           className="project-vertical-image"
                         />
                         <img
                           loading="lazy"
-                          src="/images/6942c8c20b902064375f686a_2151264417.jpg"
-                          alt=""
+                          src="/images%20new/eight.jpeg"
+                          alt="Long term farmland investment at Landmark Vanasiri"
                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 940px"
-                          srcSet="//images/6942c8c20b902064375f686a_2151264417-p-500.jpg 500w, /images/6942c8c20b902064375f686a_2151264417-p-800.jpg 800w, /images/6942c8c20b902064375f686a_2151264417-p-1080.jpg 1080w, /images/6942c8c20b902064375f686a_2151264417.jpg 1500w"
                           className="project-horizontal-image"
                         />
                       </div>
                       <div className="project-button">
                         <a
                           data-w-id="6cc3df2f-41c6-d574-494a-7a27f09ca261"
-                          href="/contact-us"
+                          href="#contact"
                           className="link-button primary-color w-inline-block"
                         >
                           <div className="button-spot-big secondary-primary-color">
@@ -236,7 +232,7 @@ export default function RecentProjects() {
                     <div className="project-card">
                       <div className="project-card-left-wrap">
                         <div className="project-title-wrap">
-                          <a href="/contact-us" className="project-link">
+                          <a href="#contact" className="project-link">
                             Build Your Weekend Farmhouse
                           </a>
                           <div className="project-card-details-wrap">
@@ -254,26 +250,24 @@ export default function RecentProjects() {
                       </div>
                       <div className="project-images-wrap">
                         <img
-                          src="/images/6942c93b4096c25f196dae00_2151302647.jpg"
+                          src="/images%20new/one.jpeg"
                           loading="lazy"
-                          alt=""
+                          alt="Weekend farmhouse at Landmark Vanasiri"
                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 940px"
-                          srcSet="//images/6942c93b4096c25f196dae00_2151302647-p-500.jpg 500w, /images/6942c93b4096c25f196dae00_2151302647-p-800.jpg 800w, /images/6942c93b4096c25f196dae00_2151302647-p-1080.jpg 1080w, /images/6942c93b4096c25f196dae00_2151302647.jpg 1200w"
                           className="project-vertical-image"
                         />
                         <img
-                          src="/images/6942cb0780d9d12045abb0b6_2151302617.jpg"
+                          src="/images%20new/ten.jpeg"
                           loading="lazy"
-                          alt=""
+                          alt="Weekend farmhouse at Landmark Vanasiri"
                           sizes="(max-width: 767px) 100vw, (max-width: 991px) 727px, 940px"
-                          srcSet="//images/6942cb0780d9d12045abb0b6_2151302617-p-500.jpg 500w, /images/6942cb0780d9d12045abb0b6_2151302617-p-800.jpg 800w, /images/6942cb0780d9d12045abb0b6_2151302617-p-1080.jpg 1080w, /images/6942cb0780d9d12045abb0b6_2151302617-p-1600.jpg 1600w, /images/6942cb0780d9d12045abb0b6_2151302617.jpg 2000w"
                           className="project-horizontal-image"
                         />
                       </div>
                       <div className="project-button">
                         <a
                           data-w-id="6cc3df2f-41c6-d574-494a-7a27f09ca261"
-                          href="/contact-us"
+                          href="#contact"
                           className="link-button primary-color w-inline-block"
                         >
                           <div className="button-spot-big secondary-primary-color">
@@ -330,7 +324,7 @@ export default function RecentProjects() {
             <div>
               <a
                 data-w-id="d8b176ee-32c4-ac10-5c41-2635c78207bf"
-                href="/contact-us"
+                href="#contact"
                 className="primary-button w-inline-block"
               >
                 <div className="button-spot-big">
