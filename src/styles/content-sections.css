@@ -1,0 +1,767 @@
+/* Additional content sections layered on top of webflow.css design tokens. */
+
+.content-label {
+  display: block;
+  margin-bottom: var(--_spacing-system---spacing--spacing-l);
+}
+
+/* Scroll reveal — only engages once w-mod-js is present, so content
+   stays fully visible with JS disabled. */
+.reveal {
+  opacity: 1;
+}
+
+.w-mod-js .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.w-mod-js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .w-mod-js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Discover the Joy of Farm Living                                   */
+/* ---------------------------------------------------------------- */
+.farmliving-row {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.farmliving-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 10px;
+  flex-shrink: 0;
+}
+
+.farmliving-index {
+  font-size: 14px;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  color: var(--primary-color);
+  letter-spacing: 0.1em;
+}
+
+.farmliving-line {
+  width: 1px;
+  flex: 1;
+  min-height: 110px;
+  background: linear-gradient(to bottom, var(--primary-color), transparent);
+}
+
+.farmliving-copy {
+  max-width: 720px;
+}
+
+@media screen and (max-width: 767px) {
+  .farmliving-row {
+    gap: 24px;
+  }
+  .farmliving-line {
+    min-height: 60px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Why Invest in Farmland                                            */
+/* ---------------------------------------------------------------- */
+.whyinvest-top {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.whyinvest-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.whyinvest-media {
+  position: relative;
+}
+
+.whyinvest-image {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+}
+
+.whyinvest-badge {
+  position: absolute;
+  left: -20px;
+  bottom: -24px;
+  background-color: var(--white);
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  padding: 20px 28px;
+  box-shadow: 0 24px 48px -16px rgba(19, 18, 11, 0.3);
+}
+
+.whyinvest-badge-num {
+  font-size: 28px;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  color: var(--black);
+  line-height: 1;
+}
+
+.whyinvest-badge-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--paragraph);
+  margin-top: 6px;
+  font-weight: var(--_typography---font-weight--medium);
+}
+
+.whyinvest-strip {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 3px solid var(--primary-color);
+  padding: 24px 32px;
+  background-color: #faf9f6;
+  border-radius: 0 var(--_spacing-system---border-radius--radius-m)
+    var(--_spacing-system---border-radius--radius-m) 0;
+}
+
+.whyinvest-strip-mark {
+  font-size: 42px;
+  line-height: 1;
+  color: var(--primary-color);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.whyinvest-strip-text {
+  font-size: var(--_typography---body-text--text-m);
+  font-weight: var(--_typography---font-weight--medium);
+  color: var(--black);
+}
+
+@media screen and (max-width: 991px) {
+  .whyinvest-top {
+    grid-template-columns: 1fr;
+  }
+  .whyinvest-media {
+    order: -1;
+    width: 100%;
+  }
+  .whyinvest-badge {
+    left: 16px;
+    bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .whyinvest-image {
+    height: 300px;
+  }
+  .whyinvest-strip {
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* How Farmland Living Differs from City Life                        */
+/* ---------------------------------------------------------------- */
+.cityfarm-split {
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  margin-top: 48px;
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  overflow: hidden;
+}
+
+.cityfarm-half {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cityfarm-half img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.cityfarm-half::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 13, 0.85),
+    rgba(13, 13, 13, 0.1) 60%
+  );
+}
+
+.cityfarm-tag,
+.cityfarm-text {
+  position: relative;
+  z-index: 2;
+  color: var(--white);
+}
+
+.cityfarm-tag {
+  display: inline-block;
+  width: fit-content;
+  margin: 28px 28px 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  background-color: rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  padding: 7px 16px;
+  border-radius: var(--_spacing-system---border-radius--radius-l);
+}
+
+.cityfarm-text {
+  margin: 0 28px 28px;
+  font-size: var(--_typography---body-text--text-m);
+  font-weight: var(--_typography---font-weight--medium);
+  max-width: 320px;
+}
+
+.cityfarm-divider {
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cityfarm-aspect {
+  color: var(--white);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  padding: 24px 0;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+  .cityfarm-split {
+    grid-template-columns: 1fr;
+  }
+  .cityfarm-half {
+    min-height: 260px;
+  }
+  .cityfarm-divider {
+    padding: 14px 0;
+  }
+  .cityfarm-aspect {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 0;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Experience Leisure Living                                          */
+/* ---------------------------------------------------------------- */
+.leisure-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  overflow: hidden;
+}
+
+.leisure-media {
+  position: relative;
+}
+
+.leisure-image {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.leisure-media-tag {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  background-color: rgba(19, 18, 11, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: var(--_spacing-system---border-radius--radius-l);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: var(--_typography---font-weight--semi-bold);
+}
+
+.leisure-content {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: center;
+}
+
+.leisure-content h2 {
+  color: var(--white);
+}
+
+.leisure-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--_typography---body-text--text-s);
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.leisure-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.leisure-feature {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.leisure-feature-index {
+  font-size: 13px;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  color: var(--primary-color);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.leisure-feature h3 {
+  color: var(--white);
+  text-transform: none;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.leisure-feature p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 767px) {
+  .leisure-panel {
+    grid-template-columns: 1fr;
+  }
+  .leisure-image {
+    min-height: 260px;
+  }
+  .leisure-content {
+    padding: 32px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Location advantages                                                */
+/* ---------------------------------------------------------------- */
+.locadv-banner {
+  position: relative;
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  padding: 56px 48px;
+}
+
+.locadv-banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.locadv-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 13, 13, 0.2),
+    rgba(13, 13, 13, 0.88)
+  );
+}
+
+.locadv-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+}
+
+.locadv-banner h2 {
+  color: var(--white);
+}
+
+.locadv-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin-top: 56px;
+  align-items: start;
+}
+
+.locadv-list {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e2e2e2;
+  background: none;
+  background-color: transparent;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+.locadv-list li {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e2e2;
+  color: var(--paragraph);
+  -webkit-text-fill-color: currentColor;
+}
+
+.locadv-list li::before {
+  content: "→";
+  color: var(--primary-color);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.proximity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .proximity-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.proximity-item {
+  padding: 28px 20px;
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  text-align: center;
+  background-color: #faf9f6;
+}
+
+.proximity-item.dark {
+  background-color: var(--black);
+}
+
+.proximity-value {
+  font-size: 42px;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  line-height: 1;
+  color: var(--black);
+}
+
+.proximity-item.dark .proximity-value {
+  color: var(--white);
+}
+
+.proximity-unit {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-color);
+  font-weight: var(--_typography---font-weight--semi-bold);
+  margin-top: 6px;
+}
+
+.proximity-place {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--paragraph);
+  font-weight: var(--_typography---font-weight--medium);
+}
+
+.proximity-item.dark .proximity-place {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.locadv-quote {
+  position: relative;
+  text-align: center;
+  max-width: 720px;
+  margin: 64px auto 0;
+  font-size: var(--_typography---body-text--text-m);
+  font-weight: var(--_typography---font-weight--medium);
+  color: var(--black);
+}
+
+.locadv-quote-mark {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 991px) {
+  .locadv-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .locadv-banner {
+    padding: 32px;
+    min-height: 260px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Nandugudi Forest guide                                             */
+/* ---------------------------------------------------------------- */
+.forestguide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.forestguide-card {
+  background-color: #faf9f6;
+  border: 1px solid #eeece7;
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  padding: 40px;
+}
+
+.forestguide-card.accent {
+  background-color: var(--black);
+  border-color: var(--black);
+}
+
+.forestguide-card.accent h3 {
+  color: var(--white);
+}
+
+.forestguide-card.accent li {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.forestguide-card-label {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.forestguide-card ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: none;
+  background-color: transparent;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+.forestguide-card li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--paragraph);
+  -webkit-text-fill-color: currentColor;
+}
+
+.forestguide-card li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .forestguide-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .forestguide-card {
+    padding: 28px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Investment hub                                                      */
+/* ---------------------------------------------------------------- */
+.investhub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+  margin-top: 48px;
+}
+
+.investhub-media {
+  position: relative;
+}
+
+.investhub-image {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  display: block;
+}
+
+.investhub-media-tag {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  background-color: rgba(19, 18, 11, 0.6);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: var(--_spacing-system---border-radius--radius-l);
+  font-size: 12px;
+  font-weight: var(--_typography---font-weight--semi-bold);
+}
+
+.investhub-card {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: var(--_spacing-system---border-radius--radius-m);
+  padding: 40px;
+}
+
+.investhub-card h3 {
+  color: var(--white);
+}
+
+.investhub-card p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.investhub-eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.investhub-eyebrow:first-of-type {
+  margin-top: 0;
+}
+
+.investhub-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 28px 0;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.investhub-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.investhub-stat-num {
+  font-size: 30px;
+  font-weight: var(--_typography---font-weight--semi-bold);
+  color: var(--white);
+  line-height: 1;
+}
+
+.investhub-stat-unit {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary-color);
+  font-weight: var(--_typography---font-weight--semi-bold);
+}
+
+.investhub-tenant {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.investhub-tenant:last-child {
+  border-bottom: none;
+}
+
+.investhub-tenant strong {
+  color: var(--white);
+}
+
+@media screen and (max-width: 767px) {
+  .investhub-grid {
+    grid-template-columns: 1fr;
+  }
+  .investhub-image {
+    min-height: 220px;
+  }
+  .investhub-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

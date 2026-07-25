@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "../styles/webflow.css";
+import "../styles/content-sections.css";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {

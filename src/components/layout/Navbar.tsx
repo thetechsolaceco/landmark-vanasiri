@@ -21,8 +21,8 @@ export default function Navbar() {
             <img
               loading="lazy"
               height="30"
-              alt="Logo"
-              src="/images/6941841ce2a9a7a93acd339f_Pody%20Logo%20White.svg"
+              alt="Landmark Vanasiri"
+              src="/images/vanasiri-logo.svg"
               className="brand-logo"
             />
           </a>
@@ -36,8 +36,8 @@ export default function Navbar() {
                 <img
                   loading="lazy"
                   height="30"
-                  alt="logo"
-                  src="/images/693e9d1043906400d3af5754_ebc3d115bf3871e2591aac9e23647967_LOGO.svg"
+                  alt="Landmark Vanasiri"
+                  src="/images/vanasiri-logo-dark.svg"
                   className="brand-logo"
                 />
               </a>
