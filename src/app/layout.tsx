@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "../styles/webflow.css";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Pody - Webflow HTML website template",
-  description: "A high-quality Webflow template for modular homes companies, crafted to attract clients, present housing models, and grow your construction business online.",
+  title: siteConfig.title,
+  description: siteConfig.description,
   openGraph: {
-    title: "Pody - Webflow HTML website template",
-    description: "A high-quality Webflow template for modular homes companies, crafted to attract clients, present housing models, and grow your construction business online.",
+    title: siteConfig.title,
+    description: siteConfig.description,
     images: [
       {
         url: "/images/695bde55f1bab79a6fffc32c_Pody%20Open%20Graph.png",
@@ -17,8 +18,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pody - Webflow HTML website template",
-    description: "A high-quality Webflow template for modular homes companies, crafted to attract clients, present housing models, and grow your construction business online.",
+    title: siteConfig.title,
+    description: siteConfig.description,
   }
 };
 
@@ -69,14 +70,14 @@ export default function RootLayout({
         </Script>
         
         {/* Google Analytics */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-G7RTCCMP5X" strategy="afterInteractive" />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.googleAnalyticsId}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('set', 'developer_id.dZGVlNj', true);
             gtag('js', new Date());
-            gtag('config', 'G-G7RTCCMP5X');
+            gtag('config', '${siteConfig.googleAnalyticsId}');
           `}
         </Script>
       </body>

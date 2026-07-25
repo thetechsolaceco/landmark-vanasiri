@@ -3454,14 +3454,15 @@ figure {
   grid-column-gap: var(--_spacing-system---spacing--spacing-4xl);
   grid-row-gap: var(--_spacing-system---spacing--spacing-4xl);
   flex-flow: column;
-  max-width: 650px;
+  max-width: 780px;
   display: flex;
 }
 
 .home-1-banner-h1 {
   color: var(--white);
   letter-spacing: var(--_typography---letter-spacing--letter-spacing-l);
-  max-width: 600px;
+  max-width: 720px;
+  text-wrap: balance;
 }
 
 .home-1-banner-paragraph-wrap {
