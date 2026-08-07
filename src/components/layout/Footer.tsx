@@ -1,6 +1,37 @@
 import { siteConfig } from "@/lib/site-config";
 
+type FooterNavLink = { label: string; href: string };
+type FooterContent = {
+  heading: string;
+  submitLabel: string;
+  successMessage: string;
+  errorMessage: string;
+  copyright: string;
+};
+
+const content: FooterContent = {
+  heading: "Stay Updated on Landmark Vanasiri",
+  submitLabel: "Submit Request",
+  successMessage: "Thank you! Your submission has been received!",
+  errorMessage: "Oops! Something went wrong while submitting the form.",
+  copyright: "© Landmark Vanasiri. All Rights Reserved.",
+};
+
+const navLinks: FooterNavLink[] = [
+  { label: "Home", href: "#home" },
+  { label: "about vanasiri", href: "#about" },
+  { label: "projects", href: "#projects" },
+  { label: "Services", href: "#services" },
+  { label: "testimonials", href: "#testimonials" },
+  { label: "Contact Us", href: "#contact" },
+];
+
 export default function Footer() {
+  const address = siteConfig.address;
+  const phone = siteConfig.phone;
+  const socials = siteConfig.socials;
+  const [home, about, projects, services, testimonials, contact] = navLinks;
+
   return (
     <div id="contact" className="form-footer" style={{ scrollMarginTop: "100px" }}>
       <div className="base-container">
@@ -10,21 +41,21 @@ export default function Footer() {
               data-w-id="d7b7b9ea-dacd-d701-16de-492485155cb5"
               className="text-white"
             >
-              Stay Updated on Landmark Vanasiri
+              {content.heading}
             </h2>
           </div>
           <div className="footer-contacts-wrap">
             <div data-w-id="d7b7b9ea-dacd-d701-16de-492485155cb8">
               <a
-                href={siteConfig.address.googleMapsUrl}
+                href={address.googleMapsUrl}
                 target="_blank"
                 className="footer-contact-link"
               >
-                {siteConfig.address.full}
+                {address.full}
               </a>
             </div>
             <div data-w-id="d7b7b9ea-dacd-d701-16de-492485155cbb">
-              <span className="footer-contact-link">{siteConfig.phone}</span>
+              <span className="footer-contact-link">{phone}</span>
             </div>
           </div>
         </div>
@@ -32,48 +63,36 @@ export default function Footer() {
           <div className="footer-links-wrap">
             <div className="links-column">
               <a
-                href="#home"
+                href={home.href}
                 aria-current="page"
                 className="footer-link w--current"
               >
-                Home
+                {home.label}
               </a>
-              <a href="#about" className="footer-link">
-                about vanasiri
+              <a href={about.href} className="footer-link">
+                {about.label}
               </a>
-              <a href="#projects" className="footer-link">
-                projects
+              <a href={projects.href} className="footer-link">
+                {projects.label}
               </a>
-              <a href="#services" className="footer-link">
-                Services
+              <a href={services.href} className="footer-link">
+                {services.label}
               </a>
-              <a href="#testimonials" className="footer-link">
-                testimonials
+              <a href={testimonials.href} className="footer-link">
+                {testimonials.label}
               </a>
-              <a href="#contact" className="footer-link">
-                Contact Us
+              <a href={contact.href} className="footer-link">
+                {contact.label}
               </a>
             </div>
             <div className="links-column">
-              <a
-                href={siteConfig.socials.facebook}
-                target="_blank"
-                className="footer-link"
-              >
+              <a href={socials.facebook} target="_blank" className="footer-link">
                 FACEBOOK
               </a>
-              <a
-                href={siteConfig.socials.instagram}
-                target="_blank"
-                className="footer-link"
-              >
+              <a href={socials.instagram} target="_blank" className="footer-link">
                 INSTAGRAM
               </a>
-              <a
-                href={siteConfig.socials.linkedin}
-                target="_blank"
-                className="footer-link"
-              >
+              <a href={socials.linkedin} target="_blank" className="footer-link">
                 Linkedin
               </a>
             </div>
@@ -149,21 +168,19 @@ export default function Footer() {
                 type="submit"
                 data-wait="Please wait..."
                 className="primary-button footer-submit w-button"
-                value="Submit Request"
+                value={content.submitLabel}
               />
             </form>
             <div className="succes-message text-white w-form-done">
-              <div>Thank you! Your submission has been received!</div>
+              <div>{content.successMessage}</div>
             </div>
             <div className="error-message text-white w-form-fail">
-              <div>Oops! Something went wrong while submitting the form.</div>
+              <div>{content.errorMessage}</div>
             </div>
           </div>
         </div>
         <div className="footer-bottom-wrap">
-          <div className="footer-rights-text">
-            © Landmark Vanasiri. All Rights Reserved.
-          </div>
+          <div className="footer-rights-text">{content.copyright}</div>
         </div>
       </div>
     </div>

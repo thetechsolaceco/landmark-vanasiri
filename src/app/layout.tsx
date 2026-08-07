@@ -4,31 +4,36 @@ import "../styles/webflow.css";
 import "../styles/content-sections.css";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: siteConfig.title,
-  description: siteConfig.description,
-  openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [
-      {
-        url: "/images/695bde55f1bab79a6fffc32c_Pody%20Open%20Graph.png",
-      }
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-  }
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { title, description } = siteConfig;
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: "/images/695bde55f1bab79a6fffc32c_Pody%20Open%20Graph.png",
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { googleAnalyticsId } = siteConfig;
+
   return (
     <html
       lang="en"
@@ -71,14 +76,14 @@ export default function RootLayout({
         </Script>
         
         {/* Google Analytics */}
-        <Script src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.googleAnalyticsId}`} strategy="afterInteractive" />
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`} strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('set', 'developer_id.dZGVlNj', true);
             gtag('js', new Date());
-            gtag('config', '${siteConfig.googleAnalyticsId}');
+            gtag('config', '${googleAnalyticsId}');
           `}
         </Script>
       </body>
