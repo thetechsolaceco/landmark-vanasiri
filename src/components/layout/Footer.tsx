@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
 import { siteConfig } from "@/lib/site-config";
 
 type FooterNavLink = { label: string; href: string };
@@ -32,6 +35,35 @@ export default function Footer() {
   const phone = siteConfig.phone;
   const socials = siteConfig.socials;
   const [home, about, projects, services, testimonials, blog, contact] = navLinks;
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const firstName = String(data.get("First-Name") ?? "").trim();
+    const lastName = String(data.get("Last-Name") ?? "").trim();
+    const name = [firstName, lastName].filter(Boolean).join(" ");
+
+    setStatus("submitting");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email: data.get("Email"),
+          phone: data.get("Phone"),
+          message: data.get("message"),
+        }),
+      });
+      if (!res.ok) throw new Error("submission failed");
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <div id="contact" className="form-footer" style={{ scrollMarginTop: "100px" }}>
@@ -106,81 +138,84 @@ export default function Footer() {
             data-w-id="d7b7b9ea-dacd-d701-16de-492485155cd5"
             className="form-block w-form"
           >
-            <form
-              id="email-form"
-              name="email-form"
-              data-name="Email Form"
-              method="get"
-              className="form"
-              data-wf-page-id="693e9d1043906400d3af5718"
-              data-wf-element-id="d7b7b9ea-dacd-d701-16de-492485155cd6"
-            >
-              <div className="text-fields-line">
-                <input
-                  className="text-field w-input"
-                  maxLength={256}
-                  name="First-Name"
-                  data-name="First Name"
-                  placeholder="First name"
-                  type="text"
-                  id="First-Name"
-                  required
-                />
-                <input
-                  className="text-field w-input"
-                  maxLength={256}
-                  name="Last-Name"
-                  data-name="Last Name"
-                  placeholder="Last name"
-                  type="text"
-                  id="Last-Name"
-                  required
-                />
+            {status === "success" ? (
+              <div className="succes-message text-white w-form-done" style={{ display: "block" }}>
+                <div>{content.successMessage}</div>
               </div>
-              <div className="text-fields-line">
-                <input
-                  className="text-field w-input"
-                  maxLength={256}
-                  name="Phone"
-                  data-name="Phone"
-                  placeholder="Phone"
-                  type="tel"
-                  id="Phone"
+            ) : (
+              <form
+                id="email-form"
+                name="email-form"
+                data-name="Email Form"
+                className="form"
+                onSubmit={handleSubmit}
+              >
+                <div className="text-fields-line">
+                  <input
+                    className="text-field w-input"
+                    maxLength={256}
+                    name="First-Name"
+                    data-name="First Name"
+                    placeholder="First name"
+                    type="text"
+                    id="First-Name"
+                    required
+                  />
+                  <input
+                    className="text-field w-input"
+                    maxLength={256}
+                    name="Last-Name"
+                    data-name="Last Name"
+                    placeholder="Last name"
+                    type="text"
+                    id="Last-Name"
+                    required
+                  />
+                </div>
+                <div className="text-fields-line">
+                  <input
+                    className="text-field w-input"
+                    maxLength={256}
+                    name="Phone"
+                    data-name="Phone"
+                    placeholder="Phone"
+                    type="tel"
+                    id="Phone"
+                    required
+                  />
+                  <input
+                    className="text-field w-input"
+                    maxLength={256}
+                    name="Email"
+                    data-name="Email"
+                    placeholder="email"
+                    type="email"
+                    id="Email"
+                    required
+                  />
+                </div>
+                <textarea
                   required
-                />
+                  placeholder="your message"
+                  maxLength={5000}
+                  id="message"
+                  name="message"
+                  data-name="message"
+                  className="text-field message-field w-input"
+                ></textarea>
                 <input
-                  className="text-field w-input"
-                  maxLength={256}
-                  name="Email"
-                  data-name="Email"
-                  placeholder="email"
-                  type="email"
-                  id="Email"
-                  required
+                  type="submit"
+                  disabled={status === "submitting"}
+                  className="primary-button footer-submit w-button"
+                  value={status === "submitting" ? "Please wait..." : content.submitLabel}
                 />
-              </div>
-              <textarea
-                required
-                placeholder="your message"
-                maxLength={5000}
-                id="message"
-                name="message"
-                data-name="message"
-                className="text-field message-field w-input"
-              ></textarea>
-              <input
-                type="submit"
-                data-wait="Please wait..."
-                className="primary-button footer-submit w-button"
-                value={content.submitLabel}
-              />
-            </form>
-            <div className="succes-message text-white w-form-done">
-              <div>{content.successMessage}</div>
-            </div>
-            <div className="error-message text-white w-form-fail">
-              <div>{content.errorMessage}</div>
-            </div>
+                {status === "error" ? (
+                  <div className="error-message text-white w-form-fail" style={{ display: "block" }}>
+                    <div>{content.errorMessage}</div>
+                  </div>
+                ) : null}
+              </form>
+            )}
           </div>
         </div>
         <div className="footer-bottom-wrap">
