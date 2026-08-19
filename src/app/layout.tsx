@@ -54,7 +54,7 @@ export default async function RootLayout({
       </head>
       <body>
         {children}
-        
+
         {/* Load jQuery and Webflow scripts */}
         <Script src="/js/jquery-3.5.1.min.dc5e7f18c8.js" strategy="beforeInteractive" />
         <Script src="/js/webfont.js" strategy="beforeInteractive" />
