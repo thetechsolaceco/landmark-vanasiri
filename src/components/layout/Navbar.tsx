@@ -19,11 +19,12 @@ const navLinks: NavLink[] = [
   { label: "PROJECTS", href: "#projects" },
   { label: "SERVICES", href: "#services" },
   { label: "TESTIMONIALS", href: "#testimonials" },
+  { label: "BLOG", href: "/blog" },
   { label: "CONTACT US", href: "#contact" },
 ];
 
 export default function Navbar() {
-  const [home, about, projects, services, testimonials, contact] = navLinks;
+  const [home, about, projects, services, testimonials, blog, contact] = navLinks;
 
   return (
     <div
@@ -95,6 +96,9 @@ export default function Navbar() {
               </a>
               <a href={testimonials.href} className="nav-link w-nav-link">
                 {testimonials.label}
+              </a>
+              <a href={blog.href} className="nav-link w-nav-link">
+                {blog.label}
               </a>
               <a href={contact.href} className="nav-link w-nav-link">
                 {contact.label}

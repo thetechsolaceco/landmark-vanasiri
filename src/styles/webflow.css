@@ -3464,6 +3464,7 @@ figure {
   letter-spacing: var(--_typography---letter-spacing--letter-spacing-l);
   max-width: 720px;
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .home-1-banner-paragraph-wrap {
@@ -9097,6 +9098,10 @@ figure {
   .home-1-banner {
     justify-content: flex-start;
     margin-bottom: 80px;
+  }
+
+  .home-1-banner-h1 {
+    font-size: 36px;
   }
 
   .home-1-banner-left-arrow {

@@ -23,6 +23,7 @@ const navLinks: FooterNavLink[] = [
   { label: "projects", href: "#projects" },
   { label: "Services", href: "#services" },
   { label: "testimonials", href: "#testimonials" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact Us", href: "#contact" },
 ];
 
@@ -30,7 +31,7 @@ export default function Footer() {
   const address = siteConfig.address;
   const phone = siteConfig.phone;
   const socials = siteConfig.socials;
-  const [home, about, projects, services, testimonials, contact] = navLinks;
+  const [home, about, projects, services, testimonials, blog, contact] = navLinks;
 
   return (
     <div id="contact" className="form-footer" style={{ scrollMarginTop: "100px" }}>
@@ -80,6 +81,9 @@ export default function Footer() {
               </a>
               <a href={testimonials.href} className="footer-link">
                 {testimonials.label}
+              </a>
+              <a href={blog.href} className="footer-link">
+                {blog.label}
               </a>
               <a href={contact.href} className="footer-link">
                 {contact.label}
