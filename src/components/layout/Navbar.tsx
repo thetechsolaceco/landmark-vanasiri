@@ -23,13 +23,22 @@ const navLinks: NavLink[] = [
   { label: "CONTACT US", href: "#contact" },
 ];
 
-export default function Navbar() {
+// The header overlays a dark hero by default (transparent bg, white text);
+// the bundled Webflow interactions runtime (webflow.*.js in layout.tsx)
+// already fades it to a dark background on scroll via its own inline style,
+// so we leave that path untouched. Pages whose content is light throughout
+// (no dark hero to fade into, e.g. blog) pass `light` to render a static
+// solid-white/dark-text header instead — its CSS uses !important so the
+// Webflow runtime's inline style can't silently re-darken it on scroll.
+export default function Navbar({ light = false }: { light?: boolean }) {
   const [home, about, projects, services, testimonials, blog, contact] = navLinks;
+  const solid = light;
+  const navLinkClass = (extra = "") => `nav-link w-nav-link${solid ? " dark" : ""}${extra}`;
 
   return (
     <div
       data-animation="over-left"
-      className="navbar-fixed w-nav"
+      className={`navbar-fixed w-nav${solid ? " white-bg" : ""}`}
       data-easing2="ease"
       data-easing="ease"
       data-collapse="medium"
@@ -49,7 +58,7 @@ export default function Navbar() {
               loading="lazy"
               height="30"
               alt={navbar.logoAlt}
-              src={navbar.logo}
+              src={solid ? "/images/vanasiri-logo-dark.svg" : navbar.logo}
               className="brand-logo"
             />
           </a>
@@ -78,29 +87,25 @@ export default function Navbar() {
               </div>
             </div>
             <div className="menu-wrap">
-              <a
-                href={home.href}
-                aria-current="page"
-                className="nav-link w-nav-link w--current"
-              >
+              <a href={home.href} aria-current="page" className={navLinkClass(" w--current")}>
                 {home.label}
               </a>
-              <a href={about.href} className="nav-link w-nav-link">
+              <a href={about.href} className={navLinkClass()}>
                 {about.label}
               </a>
-              <a href={projects.href} className="nav-link w-nav-link">
+              <a href={projects.href} className={navLinkClass()}>
                 {projects.label}
               </a>
-              <a href={services.href} className="nav-link w-nav-link">
+              <a href={services.href} className={navLinkClass()}>
                 {services.label}
               </a>
-              <a href={testimonials.href} className="nav-link w-nav-link">
+              <a href={testimonials.href} className={navLinkClass()}>
                 {testimonials.label}
               </a>
-              <a href={blog.href} className="nav-link w-nav-link">
+              <a href={blog.href} className={navLinkClass()}>
                 {blog.label}
               </a>
-              <a href={contact.href} className="nav-link w-nav-link">
+              <a href={contact.href} className={navLinkClass()}>
                 {contact.label}
               </a>
               <div className="nav-button-tablet">
@@ -124,9 +129,9 @@ export default function Navbar() {
               className="link-button w-inline-block"
             >
               <div className="button-spot-big secondary">
-                <div className="button-spot-small secondary"></div>
+                <div className={`button-spot-small secondary${solid ? " dark" : ""}`}></div>
               </div>
-              <div className="button-text">{navbar.secondaryCtaLabel}</div>
+              <div className={`button-text${solid ? " dark" : ""}`}>{navbar.secondaryCtaLabel}</div>
             </a>
           </div>
           <div className="menu-button w-nav-button">

@@ -3965,7 +3965,18 @@ figure {
 }
 
 .navbar-fixed.white-bg {
-  background-color: var(--white);
+  /* !important: the bundled Webflow interactions runtime sets an inline
+     background-color on this element on scroll (fading it to black for the
+     transparent/dark variant); this variant must stay solid regardless. */
+  background-color: var(--white) !important;
+}
+
+.button-text.dark {
+  color: var(--black);
+}
+
+.button-spot-small.dark {
+  background-color: var(--black);
 }
 
 .link-button {

@@ -54,7 +54,7 @@ export default async function BlogPostPage({
   return (
     <>
       <RevealOnScroll />
-      <Navbar />
+      <Navbar light />
       <section className="section blog-hero-section blog-post-hero">
         <div className="w-layout-blockcontainer base-container w-container">
           <div className="blog-wrap">
