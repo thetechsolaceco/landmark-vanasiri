@@ -20,7 +20,7 @@ export default async function BlogIndexPage() {
   return (
     <>
       <RevealOnScroll />
-      <Navbar />
+      <Navbar light />
       <section className="section blog-hero-section">
         <div className="w-layout-blockcontainer base-container w-container">
           <div className="blog-page-banner">
