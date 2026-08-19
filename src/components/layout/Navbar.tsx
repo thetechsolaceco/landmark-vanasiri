@@ -1,4 +1,31 @@
+type NavLink = { label: string; href: string };
+type NavbarContent = {
+  logo: string;
+  logoAlt: string;
+  primaryCtaLabel: string;
+  secondaryCtaLabel: string;
+};
+
+const navbar: NavbarContent = {
+  logo: "/images/vanasiri-logo.svg",
+  logoAlt: "Landmark Vanasiri",
+  primaryCtaLabel: "Book a Site Visit",
+  secondaryCtaLabel: "Request a Quote",
+};
+
+const navLinks: NavLink[] = [
+  { label: "HOME", href: "#home" },
+  { label: "ABOUT US", href: "#about" },
+  { label: "PROJECTS", href: "#projects" },
+  { label: "SERVICES", href: "#services" },
+  { label: "TESTIMONIALS", href: "#testimonials" },
+  { label: "BLOG", href: "/blog" },
+  { label: "CONTACT US", href: "#contact" },
+];
+
 export default function Navbar() {
+  const [home, about, projects, services, testimonials, blog, contact] = navLinks;
+
   return (
     <div
       data-animation="over-left"
@@ -21,8 +48,8 @@ export default function Navbar() {
             <img
               loading="lazy"
               height="30"
-              alt="Landmark Vanasiri"
-              src="/images/vanasiri-logo.svg"
+              alt={navbar.logoAlt}
+              src={navbar.logo}
               className="brand-logo"
             />
           </a>
@@ -36,7 +63,7 @@ export default function Navbar() {
                 <img
                   loading="lazy"
                   height="30"
-                  alt="Landmark Vanasiri"
+                  alt={navbar.logoAlt}
                   src="/images/vanasiri-logo-dark.svg"
                   className="brand-logo"
                 />
@@ -52,26 +79,29 @@ export default function Navbar() {
             </div>
             <div className="menu-wrap">
               <a
-                href="#home"
+                href={home.href}
                 aria-current="page"
                 className="nav-link w-nav-link w--current"
               >
-                HOME
+                {home.label}
               </a>
-              <a href="#about" className="nav-link w-nav-link">
-                ABOUT US
+              <a href={about.href} className="nav-link w-nav-link">
+                {about.label}
               </a>
-              <a href="#projects" className="nav-link w-nav-link">
-                PROJECTS
+              <a href={projects.href} className="nav-link w-nav-link">
+                {projects.label}
               </a>
-              <a href="#services" className="nav-link w-nav-link">
-                SERVICES
+              <a href={services.href} className="nav-link w-nav-link">
+                {services.label}
               </a>
-              <a href="#testimonials" className="nav-link w-nav-link">
-                TESTIMONIALS
+              <a href={testimonials.href} className="nav-link w-nav-link">
+                {testimonials.label}
               </a>
-              <a href="#contact" className="nav-link w-nav-link">
-                CONTACT US
+              <a href={blog.href} className="nav-link w-nav-link">
+                {blog.label}
+              </a>
+              <a href={contact.href} className="nav-link w-nav-link">
+                {contact.label}
               </a>
               <div className="nav-button-tablet">
                 <a
@@ -82,7 +112,7 @@ export default function Navbar() {
                   <div className="button-spot-big">
                     <div className="button-spot-small"></div>
                   </div>
-                  <div className="button-text">Book a Site Visit</div>
+                  <div className="button-text">{navbar.primaryCtaLabel}</div>
                 </a>
               </div>
             </div>
@@ -96,7 +126,7 @@ export default function Navbar() {
               <div className="button-spot-big secondary">
                 <div className="button-spot-small secondary"></div>
               </div>
-              <div className="button-text">Request a Quote</div>
+              <div className="button-text">{navbar.secondaryCtaLabel}</div>
             </a>
           </div>
           <div className="menu-button w-nav-button">

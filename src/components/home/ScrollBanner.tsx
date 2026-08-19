@@ -1,4 +1,12 @@
+type ScrollBannerContent = { image: string; imageAlt: string };
+
+const scrollBanner: ScrollBannerContent = {
+  image: "/images%20new/twentyone.jpeg",
+  imageAlt: "Tree-lined pathway at Landmark Vanasiri",
+};
+
 export default function ScrollBanner() {
+
   return (
     <section className="section no-space">
       <div
@@ -17,11 +25,11 @@ export default function ScrollBanner() {
         className="scroll-image-wrap"
       >
         <img
-          src="/images%20new/twentyone.jpeg"
+          src={scrollBanner.image}
           loading="lazy"
           data-w-id="a9c78244-f457-f02e-4795-f7ab0331c7ff"
           sizes="(max-width: 2000px) 100vw, 2000px"
-          alt="Tree-lined pathway at Landmark Vanasiri"
+          alt={scrollBanner.imageAlt}
           className="scroll-image"
         />
       </div>

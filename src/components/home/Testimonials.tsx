@@ -1,4 +1,27 @@
-export default function Testimonials() {
+import { getTestimonials } from "@/lib/content";
+
+const fallback = [
+  {
+    quote: "Awaiting a verified testimonial from a Landmark Vanasiri buyer or site visitor.",
+    authorRole: "Homeowner",
+    starRating: 5,
+  },
+  {
+    quote: "Awaiting a verified testimonial from a Landmark Vanasiri buyer or site visitor.",
+    authorRole: "Property Owner",
+    starRating: 5,
+  },
+  {
+    quote: "Awaiting a verified testimonial from a Landmark Vanasiri buyer or site visitor.",
+    authorRole: "Investor",
+    starRating: 5,
+  },
+];
+
+export default async function Testimonials() {
+  const testimonials = await getTestimonials();
+  const items = testimonials.length > 0 ? testimonials : fallback;
+
   return (
     <section id="testimonials" className="section home-photo-section" style={{ scrollMarginTop: "100px" }}>
       <div className="w-layout-blockcontainer base-container w-container">
@@ -60,177 +83,35 @@ export default function Testimonials() {
             data-infinite="true"
           >
             <div className="testimonials-mask w-slider-mask">
-              <div className="w-slide">
-                <div className="w-dyn-list">
-                  <div role="list" className="w-dyn-items">
-                    <div role="listitem" className="w-dyn-item">
-                      <div className="testimonials-card">
-                        <div
-                          data-w-id="c35c7363-5cc2-d22f-8bbd-01a1d4e93bc4"
-                          style={{
-                            opacity: "0",
-                            WebkitTransform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                            MozTransform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                            msTransform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                            transform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                          }}
-                          className="testimonial-text-wrap"
-                        >
-                          <div className="stars-wrap">
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
+              {items.map((item, i) => (
+                <div className="w-slide" key={`${item.authorRole}-${i}`}>
+                  <div className="w-dyn-list">
+                    <div role="list" className="w-dyn-items">
+                      <div role="listitem" className="w-dyn-item">
+                        <div className="testimonials-card">
+                          <div className="testimonial-text-wrap">
+                            <div className="stars-wrap">
+                              {Array.from({ length: item.starRating }).map((_, starIndex) => (
+                                <img
+                                  key={starIndex}
+                                  src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
+                                  loading="lazy"
+                                  alt="icon"
+                                />
+                              ))}
+                            </div>
+                            <div className="testimonial-text">{item.quote}</div>
                           </div>
-                          <div className="testimonial-text">
-                            Awaiting a verified testimonial from a Landmark
-                            Vanasiri buyer or site visitor.
+                          <div className="client-name">
+                            <div className="client-name-wrap">{item.authorRole}</div>
+                            <p>Landmark Vanasiri</p>
                           </div>
-                        </div>
-                        <div
-                          data-w-id="20416eea-845d-78dd-ae02-a4921b7ba3b5"
-                          style={{
-                            opacity: "0",
-                            WebkitTransform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                            MozTransform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                            msTransform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                            transform:
-                              "translate3d(0, 15px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)",
-                          }}
-                          className="client-name"
-                        >
-                          <div className="client-name-wrap">Homeowner</div>
-                          <p>Landmark Vanasiri</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="w-slide">
-                <div className="w-dyn-list">
-                  <div role="list" className="w-dyn-items">
-                    <div role="listitem" className="w-dyn-item">
-                      <div className="testimonials-card">
-                        <div className="testimonial-text-wrap">
-                          <div className="stars-wrap">
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                          </div>
-                          <div className="testimonial-text">
-                            Awaiting a verified testimonial from a Landmark
-                            Vanasiri buyer or site visitor.
-                          </div>
-                        </div>
-                        <div className="client-name">
-                          <div className="client-name-wrap">
-                            Property Owner
-                          </div>
-                          <p>Landmark Vanasiri</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-slide">
-                <div className="w-dyn-list">
-                  <div role="list" className="w-dyn-items">
-                    <div role="listitem" className="w-dyn-item">
-                      <div className="testimonials-card">
-                        <div className="testimonial-text-wrap">
-                          <div className="stars-wrap">
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                            <img
-                              src="/images/6943cc0887db16916ac7e9ee_ic_baseline-star.svg"
-                              loading="lazy"
-                              alt="icon"
-                            />
-                          </div>
-                          <div className="testimonial-text">
-                            Awaiting a verified testimonial from a Landmark
-                            Vanasiri buyer or site visitor.
-                          </div>
-                        </div>
-                        <div className="client-name">
-                          <div className="client-name-wrap">Investor</div>
-                          <p>Landmark Vanasiri</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="testimonials-left-arrow w-slider-arrow-left">
               <img
