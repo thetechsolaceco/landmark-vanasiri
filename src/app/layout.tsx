@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description,
       images: [
         {
-          url: "/images/695bde55f1bab79a6fffc32c_Pody%20Open%20Graph.png",
+          url: "/images%20new/twentyfive.jpeg",
         },
       ],
       type: "website",
@@ -44,8 +44,8 @@ export default async function RootLayout({
       <head>
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
-        <link href="/images/695bda0c5d5d9ccac91eb58a_Pody-favicon.jpg" rel="shortcut icon" type="image/x-icon" />
-        <link href="/images/695bda1077c419a3c36b9432_Pody-webclip.jpg" rel="apple-touch-icon" />
+        <link href="/images/vanasiri-favicon.png" rel="shortcut icon" type="image/png" />
+        <link href="/images/vanasiri-favicon.png" rel="apple-touch-icon" />
         <script
           dangerouslySetInnerHTML={{
             __html: `!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);`
