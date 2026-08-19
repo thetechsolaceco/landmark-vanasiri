@@ -16,10 +16,9 @@ export const siteConfig = {
     googleMapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Bavapura+Village%2C+Sulibele+Hobli%2C+Hosakote+Taluk%2C+Bengaluru+Rural+District%2C+Karnataka",
   },
-  // Not yet verified by the sales team. Do not replace with invented digits, see PDF content note.
-  phone: "Available on request",
-  phoneHref: "#",
-  email: "Available on request",
+  phone: "+91 70909 44944",
+  phoneHref: "tel:+917090944944",
+  email: "sale@landmarknet.com",
   socials: {
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com/",
