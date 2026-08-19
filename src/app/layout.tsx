@@ -4,6 +4,7 @@ import "../styles/webflow.css";
 import "../styles/content-sections.css";
 import { siteConfig } from "@/lib/site-config";
 
+
 export async function generateMetadata(): Promise<Metadata> {
   const { title, description } = siteConfig;
   return {
