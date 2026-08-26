@@ -14,13 +14,13 @@ const navbar: NavbarContent = {
 };
 
 const navLinks: NavLink[] = [
-  { label: "HOME", href: "#home" },
-  { label: "ABOUT US", href: "#about" },
-  { label: "PROJECTS", href: "#projects" },
-  { label: "SERVICES", href: "#services" },
-  { label: "TESTIMONIALS", href: "#testimonials" },
+  { label: "HOME", href: "/#home" },
+  { label: "ABOUT US", href: "/#about" },
+  { label: "PROJECTS", href: "/#projects" },
+  { label: "SERVICES", href: "/#services" },
+  { label: "TESTIMONIALS", href: "/#testimonials" },
   { label: "BLOG", href: "/blog" },
-  { label: "CONTACT US", href: "#contact" },
+  { label: "CONTACT US", href: "/#contact" },
 ];
 
 // The header overlays a dark hero by default (transparent bg, white text);
@@ -111,7 +111,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
               <div className="nav-button-tablet">
                 <a
                   data-w-id="d8b176ee-32c4-ac10-5c41-2635c78207bf"
-                  href="#contact"
+                  href="/#contact"
                   className="primary-button w-inline-block"
                 >
                   <div className="button-spot-big">
@@ -125,7 +125,7 @@ export default function Navbar({ light = false }: { light?: boolean }) {
           <div className="nav-button-wrap">
             <a
               data-w-id="e849a25e-291d-a702-7a0a-1e19f7905b30"
-              href="#contact"
+              href="/#contact"
               className="link-button w-inline-block"
             >
               <div className="button-spot-big secondary">

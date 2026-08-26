@@ -21,13 +21,13 @@ const content: FooterContent = {
 };
 
 const navLinks: FooterNavLink[] = [
-  { label: "Home", href: "#home" },
-  { label: "about vanasiri", href: "#about" },
-  { label: "projects", href: "#projects" },
-  { label: "Services", href: "#services" },
-  { label: "testimonials", href: "#testimonials" },
+  { label: "Home", href: "/#home" },
+  { label: "about vanasiri", href: "/#about" },
+  { label: "projects", href: "/#projects" },
+  { label: "Services", href: "/#services" },
+  { label: "testimonials", href: "/#testimonials" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 export default function Footer() {
@@ -131,6 +131,9 @@ export default function Footer() {
               <a href={socials.linkedin} target="_blank" className="footer-link">
                 Linkedin
               </a>
+              <a href="/privacy-policy" className="footer-link">
+                Privacy Policy
+              </a>
             </div>
           </div>
           <div
@@ -220,6 +223,11 @@ export default function Footer() {
         </div>
         <div className="footer-bottom-wrap">
           <div className="footer-rights-text">{content.copyright}</div>
+          <div className="footer-rights-wrap">
+            <a href="/privacy-policy" className="footer-rights-bottom-link">
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </div>
     </div>
